@@ -93,4 +93,3 @@ Built by Ola Abo Mokh using the GR00T-X Embodiment Sim dataset.
 Thanks to the open-source Python ML ecosystem.
 
 ```
-Let me know if you’d like this saved as a file for download, or if you want help uploading it to your GitHub repo now.
