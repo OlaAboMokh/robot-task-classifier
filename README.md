@@ -1,24 +1,25 @@
 # robot-task-classifier
-A full machine learning pipeline that classifies robot episodes as BoxCleanup or DrawerCleanup using only internal sensor and action data. Includes data aggregation, PCA, multiple classifiers, feature importance, and clean evaluation with no data leakage.
+A full machine-learning pipeline that classifies robot episodes as **BoxCleanup** or **DrawerCleanup** using only internal sensor and action data. The workflow covers data aggregation, PCA, multiple classifiers, feature-importance analysis, and evaluation with no data leakage.
+
 ---
 
 ## What the project does
+We analyze sensor/control data from the GR00T-X Embodiment Sim dataset and train several models to predict the task type (box vs. drawer) purely from internal features.
 
-We analyze sensor and control data collected from a robot performing different tasks and train several models to predict the task type (box vs drawer) based purely on internal features.
+Key explorations:
 
-We also explore:
-- How features differ between tasks
-- Dimensionality reduction using PCA
-- Which features are most important for prediction
+- Performance of five classifiers (LogReg, Lasso, Linear SVM, Random Forest, Gradient Boosting) before and after PCA
+- Feature differences between tasks  
+- Dimensionality reduction with PCA  
+- Feature importance for each model  
 
 ---
 
 ## Models used
-
-Each model is trained both **before and after PCA** (retain 95% variance):
+Each model is trained **before and after PCA** (95 % variance retained):
 
 - Logistic Regression  
-- Lasso Logistic Regression (with feature selection)  
+- Lasso Logistic Regression (feature selection)  
 - Linear SVM  
 - Random Forest  
 - Gradient Boosting  
@@ -26,29 +27,29 @@ Each model is trained both **before and after PCA** (retain 95% variance):
 ---
 
 ## Evaluation methods
-
-- ROC-AUC scores (cross-validated and test)
+- ROC-AUC (cross-validated & test)  
 - Confusion Matrices  
 - Log-loss curves  
-- Classification reports (precision, recall, F1)  
-- Feature importance (coefficients, Gini)  
-- PCA component analysis (PC1 loadings, state vs action)  
+- Classification reports (precision / recall / F1)  
+- Feature-importance plots (coefficients & Gini)  
+- PCA component analysis (PC1 loadings, state vs. action)  
 
 ---
 
-## Folder Structure
+## Folder structure
 ```text
 robot-task-classifier/
 ├── src/
-│   └── main.py             # Full ML pipeline
+│   └── main.py            # Full ML pipeline
 ├── data/
-│   └── ├── BoxCleanup/     # .parquet files
-│       └── DrawerCleanup/  # .parquet files
-├── figures/                # Auto-generated plots (git-ignored) ← optional
+│   ├── BoxCleanup/        # .parquet files
+│   └── DrawerCleanup/     # .parquet files
 ├── README.md
+├── LICENSE
 ├── requirements.txt
 └── .gitignore
----
+
+```
 
 ## How to run  
 
@@ -63,15 +64,19 @@ python src/main.py
 
 ## Requirements
 
-| Package        | Tested Version |
-|----------------|----------------|
-| Python         | 3.8 – 3.12     |
-| pandas         | 2.x            |
-| numpy          | 1.26           |
-| scikit-learn   | 1.5            |
-| matplotlib     | 3.9            |
-| seaborn        | 0.13           |
-| statsmodels    | 0.15           |
+| Package          | Tested Version |
+| ---------------- | -------------- |
+| Python           | 3.8 – 3.12     |
+| pandas           | 2.2            |
+| numpy            | 1.26           |
+| scipy            | 1.12           |
+| pyarrow          | 15.0           |
+| scikit-learn     | 1.5            |
+| matplotlib       | 3.9            |
+| seaborn          | 0.13           |
+| statsmodels      | 0.15           |
+| glob2 (optional) | 0.7            |
+| tqdm  (optional) | 4.66           |
 
 Install everything with:
 ```bash
