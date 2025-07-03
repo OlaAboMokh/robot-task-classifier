@@ -74,8 +74,8 @@ set_global_seeds(SEED)
 
 # %% 📁 LOAD DATA FROM PARQUET FILES
 # Define relative paths
-box_path = os.path.join("data", "gr00t_dataset", "BoxCleanup")
-drawer_path = os.path.join("data", "gr00t_dataset", "DrawerCleanup")
+box_path = os.path.join("data", "BoxCleanup")
+drawer_path = os.path.join("data", "DrawerCleanup")
 
 # Find all .parquet files
 box_files = glob.glob(os.path.join(box_path, "**/*.parquet"), recursive=True)
