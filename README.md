@@ -41,10 +41,13 @@ Each model is trained both **before and after PCA** (retain 95% variance):
 robot-task-classifier/
 ├── src/
 │   └── main.py             # Full ML pipeline
-├── data/                   # Place parquet files here
-├── README.md               # This file
-├── requirements.txt        # Python dependencies
-└── .gitignore              # Files/folders Git should ignore
+├── data/
+│   └── ├── BoxCleanup/     # .parquet files
+│       └── DrawerCleanup/  # .parquet files
+├── figures/                # Auto-generated plots (git-ignored) ← optional
+├── README.md
+├── requirements.txt
+└── .gitignore
 ---
 
 ## How to run  
