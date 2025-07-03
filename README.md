@@ -36,7 +36,7 @@ Each model is trained both **before and after PCA** (retain 95% variance):
 
 ---
 
-## 🗂 Folder Structure
+## Folder Structure
 robot-task-classifier/
 ├── src/
 │ └── main.py # Full ML pipeline
@@ -48,7 +48,7 @@ robot-task-classifier/
 
 ---
 
-## ▶ How to run  
+## How to run  
 
 1. Clone or download this repo.  
 2. Place your GR00T dataset (parquet files) in the `data/` folder.  
