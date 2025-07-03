@@ -2,7 +2,7 @@
 A full machine learning pipeline that classifies robot episodes as BoxCleanup or DrawerCleanup using only internal sensor and action data. Includes data aggregation, PCA, multiple classifiers, feature importance, and clean evaluation with no data leakage.
 ---
 
-## 🧠 What the project does
+## What the project does
 
 We analyze sensor and control data collected from a robot performing different tasks and train several models to predict the task type (box vs drawer) based purely on internal features.
 
@@ -13,7 +13,7 @@ We also explore:
 
 ---
 
-## 🧪 Models used
+## Models used
 
 Each model is trained both **before and after PCA** (retain 95% variance):
 
@@ -25,7 +25,7 @@ Each model is trained both **before and after PCA** (retain 95% variance):
 
 ---
 
-## 📊 Evaluation methods
+## Evaluation methods
 
 - ROC-AUC scores (cross-validated and test)
 - Confusion Matrices  
@@ -48,7 +48,7 @@ robot-task-classifier/
 
 ---
 
-## ▶️ How to run  
+## ▶ How to run  
 
 1. Clone or download this repo.  
 2. Place your GR00T dataset (parquet files) in the `data/` folder.  
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-## 📦 Requirements
+## Requirements
 
 | Package        | Tested Version |
 |----------------|----------------|
@@ -75,7 +75,7 @@ Install everything with:
 ```bash
 pip install -r requirements.txt
 ```
-## 📄 License
+## License
 MIT – feel free to use, modify, and share.
 
 ## Credits
