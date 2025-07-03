@@ -37,6 +37,7 @@ Each model is trained **before and after PCA** (95 % variance retained):
 ---
 
 ## Folder structure
+```text
 robot-task-classifier/
 ├── src/
 │   └── main.py            # Full ML pipeline
@@ -47,7 +48,6 @@ robot-task-classifier/
 ├── LICENSE
 ├── requirements.txt
 └── .gitignore
-
 
 ```
 
@@ -62,8 +62,8 @@ robot-task-classifier/
 ```bash
 pip install -r requirements.txt
 python src/main.py
-```
 
+```
 
 ## Requirements
 
