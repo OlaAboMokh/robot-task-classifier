@@ -37,14 +37,7 @@ Each model is trained both **before and after PCA** (retain 95% variance):
 ---
 
 ## Folder Structure
-robot-task-classifier/
-├── src/
-│ └── main.py # Full ML pipeline
-├── data/ # Place parquet files here
-├── figures/ # Auto-generated plots (ignored by Git)
-├── README.md # This file
-├── requirements.txt # Python dependencies
-└── .gitignore # Files/folders Git should ignore
+<pre> ```text robot-task-classifier/ ├── src/ │ └── main.py # Full ML pipeline ├── data/ # Place parquet files here ├── figures/ # Auto-generated plots (ignored by Git) ├── README.md # This file ├── requirements.txt # Python dependencies └── .gitignore # Files/folders Git should ignore ``` </pre>
 
 ---
 
